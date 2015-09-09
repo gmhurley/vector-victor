@@ -46,3 +46,12 @@ def vector_sub(x, y):
         raise ShapeException("Shape rule: the vectors must be the same size.")
     else:
         return [x[z] - y[z] for z in range(len(x))]
+
+
+def vector_sum(*args):
+    """Can take any number of vectors and add them together."""
+    lst = [len(x) for x in args]
+    if any(x != lst[0] for x in lst):
+        raise ShapeException("Shape rule: the vectors must be the same size.")
+    else:
+        return [sum(x) for x in zip(*args)]
