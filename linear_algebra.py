@@ -34,3 +34,15 @@ def vector_add(x, y):
         raise ShapeException("Shape rule: the vectors must be the same size.")
     else:
         return [x[z] + y[z] for z in range(len(x))]
+
+
+def vector_sub(x, y):
+    """
+    [a b]  - [c d]  = [a-c b-d]
+
+    Matrix + Matrix = Matrix
+    """
+    if len(x) != len(y):
+        raise ShapeException("Shape rule: the vectors must be the same size.")
+    else:
+        return [x[z] - y[z] for z in range(len(x))]
