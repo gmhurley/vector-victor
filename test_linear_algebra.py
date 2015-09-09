@@ -38,14 +38,14 @@ def test_vector_add():
     assert vector_add(u, z) == u
 
 
-# def test_vector_add_is_commutative():
-#     assert vector_add(w, y) == vector_add(y, w)
+def test_vector_add_is_commutative():
+    assert vector_add(w, y) == vector_add(y, w)
 
 
-# @raises(ShapeException)
-# def test_vector_add_checks_shapes():
-#     """Shape rule: the vectors must be the same size."""
-#     vector_add(m, v)
+@raises(ShapeException)
+def test_vector_add_checks_shapes():
+    """Shape rule: the vectors must be the same size."""
+    vector_add(m, v)
 
 
 # def test_vector_sub():

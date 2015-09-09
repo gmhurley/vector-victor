@@ -30,4 +30,7 @@ def vector_add(x, y):
 
     Matrix + Matrix = Matrix
     """
-    return [x[z] + y[z] for z in range(len(x))]
+    if len(x) != len(y):
+        raise ShapeException("Shape rule: the vectors must be the same size.")
+    else:
+        return [x[z] + y[z] for z in range(len(x))]
