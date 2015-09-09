@@ -67,3 +67,12 @@ def dot(x, y):
         raise ShapeException("Shape rule: the vectors must be the same size.")
     else:
         return sum([x[i] * y[i] for i in range(len(x))])
+
+
+def vector_multiply(x, y):
+    """
+    [a b]  *  Z     = [a*Z b*Z]
+
+    Vector * Scalar = Vector
+    """
+    return [z * y for z in x]

@@ -94,14 +94,14 @@ def test_dot_checks_shapes():
     dot(v, m)
 
 
-# def test_vector_multiply():
-#     """
-#     [a b]  *  Z     = [a*Z b*Z]
+def test_vector_multiply():
+    """
+    [a b]  *  Z     = [a*Z b*Z]
 
-#     Vector * Scalar = Vector
-#     """
-#     assert vector_multiply(v, 0.5) == [0.5, 1.5, 0]
-#     assert vector_multiply(m, 2) == [6, 8]
+    Vector * Scalar = Vector
+    """
+    assert vector_multiply(v, 0.5) == [0.5, 1.5, 0]
+    assert vector_multiply(m, 2) == [6, 8]
 
 
 # def test_vector_mean():
