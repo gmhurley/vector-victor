@@ -55,3 +55,15 @@ def vector_sum(*args):
         raise ShapeException("Shape rule: the vectors must be the same size.")
     else:
         return [sum(x) for x in zip(*args)]
+
+
+def dot(x, y):
+    """
+    dot([a b], [c d])   = a * c + b * d
+
+    dot(Vector, Vector) = Scalar
+    """
+    if len(x) != len(y):
+        raise ShapeException("Shape rule: the vectors must be the same size.")
+    else:
+        return sum([x[i] * y[i] for i in range(len(x))])
