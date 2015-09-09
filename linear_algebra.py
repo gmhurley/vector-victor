@@ -22,3 +22,12 @@ def shape(inp):
         return (len(inp), y)
     except TypeError:
         return (len(inp), )
+
+
+def vector_add(x, y):
+    """
+    [a b]  + [c d]  = [a+c b+d]
+
+    Matrix + Matrix = Matrix
+    """
+    return [x[z] + y[z] for z in range(len(x))]
