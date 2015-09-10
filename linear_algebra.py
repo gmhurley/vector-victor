@@ -66,3 +66,11 @@ def matrix_col(inp, pos):
 
 def matrix_scalar_multiply(inp, scalar):
     return [[x * scalar for x in row] for row in inp]
+
+
+def matrix_vector_multiply(matrix, lst):
+    if len(matrix_row(matrix, 0)) != len(lst):
+        raise ShapeException("The number of rows of the vector must equal the number of columns of the matrix.")
+    else:
+        multiplied = [[x[idx] * lst[idx] for idx in range(len(lst))] for x in matrix]
+        return [sum(x) for x in multiplied]
