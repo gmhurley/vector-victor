@@ -25,11 +25,6 @@ def shape(inp):
 
 
 def vector_add(x, y):
-    """
-    [a b]  + [c d]  = [a+c b+d]
-
-    Matrix + Matrix = Matrix
-    """
     if len(x) != len(y):
         raise ShapeException("Shape rule: the vectors must be the same size.")
     else:
@@ -37,11 +32,6 @@ def vector_add(x, y):
 
 
 def vector_sub(x, y):
-    """
-    [a b]  - [c d]  = [a-c b-d]
-
-    Matrix + Matrix = Matrix
-    """
     if len(x) != len(y):
         raise ShapeException("Shape rule: the vectors must be the same size.")
     else:
@@ -49,7 +39,6 @@ def vector_sub(x, y):
 
 
 def vector_sum(*args):
-    """Can take any number of vectors and add them together."""
     lst = [len(x) for x in args]
     if any(x != lst[0] for x in lst):
         raise ShapeException("Shape rule: the vectors must be the same size.")
@@ -58,11 +47,6 @@ def vector_sum(*args):
 
 
 def dot(x, y):
-    """
-    dot([a b], [c d])   = a * c + b * d
-
-    dot(Vector, Vector) = Scalar
-    """
     if len(x) != len(y):
         raise ShapeException("Shape rule: the vectors must be the same size.")
     else:
@@ -70,9 +54,8 @@ def dot(x, y):
 
 
 def vector_multiply(x, y):
-    """
-    [a b]  *  Z     = [a*Z b*Z]
-
-    Vector * Scalar = Vector
-    """
     return [z * y for z in x]
+
+
+def vector_mean(*args):
+    return([v/len([x for x in args]) for v in vector_sum(*[x for x in args])])
