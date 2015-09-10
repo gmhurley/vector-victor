@@ -5,6 +5,7 @@ Passing unit tests
 No use of third-party libraries - only built in + - / * operators and the math module
 No use of for or while loops
 """
+from math import sqrt
 
 
 class ShapeException(Exception):
@@ -59,3 +60,7 @@ def vector_multiply(x, y):
 
 def vector_mean(*args):
     return([v/len([x for x in args]) for v in vector_sum(*[x for x in args])])
+
+
+def magnitude(v):
+    return sqrt(sum([x**2 for x in v]))
