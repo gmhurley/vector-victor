@@ -129,69 +129,69 @@ def test_magnitude():
     assert magnitude(z) == 0
 
 
-# A = [[1, 0, 0],
-#      [0, 1, 0],
-#      [0, 0, 1]]
-# B = [[1, 2, 3],
-#      [4, 5, 6],
-#      [7, 8, 9]]
-# C = [[1, 2],
-#      [2, 1],
-#      [1, 2]]
-# D = [[1, 2, 3],
-#      [3, 2, 1]]
+A = [[1, 0, 0],
+     [0, 1, 0],
+     [0, 0, 1]]
+B = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+C = [[1, 2],
+     [2, 1],
+     [1, 2]]
+D = [[1, 2, 3],
+     [3, 2, 1]]
 
 
-# # HARD MODE TESTS BELOW
-# # UNCOMMENT THEM FOR HARD MODE!
+# HARD MODE TESTS BELOW
+# UNCOMMENT THEM FOR HARD MODE!
 
-# # def test_shape_matrices():
-# #     """shape should take a vector or matrix and return a tuple with the
-# #     number of rows (for a vector) or the number of rows and columns
-# #     (for a matrix.)"""
-# #     assert shape(A) == (3, 3)
-# #     assert shape(C) == (3, 2)
-# #     assert shape(D) == (2, 3)
-# #
-# #
-# # def test_matrix_row():
-# #     """
-# #            0 1  <- rows
-# #        0 [[a b]]
-# #        1 [[c d]]
-# #        ^
-# #      columns
-# #     """
-# #     assert matrix_row(A, 0) == [1, 0, 0]
-# #     assert matrix_row(B, 1) == [4, 5, 6]
-# #     assert matrix_row(C, 2) == [1, 2]
-# #
-# #
-# # def test_matrix_col():
-# #     """
-# #            0 1  <- rows
-# #        0 [[a b]]
-# #        1 [[c d]]
-# #        ^
-# #      columns
-# #     """
-# #     assert matrix_col(A, 0) == [1, 0, 0]
-# #     assert matrix_col(B, 1) == [2, 5, 8]
-# #     assert matrix_col(D, 2) == [3, 1]
-# #
-# #
-# # def test_matrix_scalar_multiply():
-# #     """
-# #     [[a b]   *  Z   =   [[a*Z b*Z]
-# #      [c d]]              [c*Z d*Z]]
-# #
-# #     Matrix * Scalar = Matrix
-# #     """
-# #     assert matrix_scalar_multiply(C, 3) == [[3, 6],
-# #                                             [6, 3],
-# #                                             [3, 6]]
-# #
-# #
+def test_shape_matrices():
+    """shape should take a vector or matrix and return a tuple with the
+    number of rows (for a vector) or the number of rows and columns
+    (for a matrix.)"""
+    assert shape(A) == (3, 3)
+    assert shape(C) == (3, 2)
+    assert shape(D) == (2, 3)
+
+
+def test_matrix_row():
+    """
+           0 1  <- rows
+       0 [[a b]]
+       1 [[c d]]
+       ^
+     columns
+    """
+    assert matrix_row(A, 0) == [1, 0, 0]
+    assert matrix_row(B, 1) == [4, 5, 6]
+    assert matrix_row(C, 2) == [1, 2]
+
+
+def test_matrix_col():
+    """
+           0 1  <- rows
+       0 [[a b]]
+       1 [[c d]]
+       ^
+     columns
+    """
+    assert matrix_col(A, 0) == [1, 0, 0]
+    assert matrix_col(B, 1) == [2, 5, 8]
+    assert matrix_col(D, 2) == [3, 1]
+
+
+def test_matrix_scalar_multiply():
+    """
+    [[a b]   *  Z   =   [[a*Z b*Z]
+     [c d]]              [c*Z d*Z]]
+
+    Matrix * Scalar = Matrix
+    """
+    assert matrix_scalar_multiply(C, 3) == [[3, 6],
+                                            [6, 3],
+                                            [3, 6]]
+
+
 # # def test_matrix_vector_multiply():
 # #     """
 # #     [[a b]   *  [x   =   [a*x+b*y

@@ -54,3 +54,15 @@ def vector_mean(*args):
 
 def magnitude(v):
     return sqrt(sum([x**2 for x in v]))
+
+
+def matrix_row(inp, pos):
+    return inp[pos]
+
+
+def matrix_col(inp, pos):
+    return [x[pos] for x in inp]
+
+
+def matrix_scalar_multiply(inp, scalar):
+    return [[x * scalar for x in row] for row in inp]
